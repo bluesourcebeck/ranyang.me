@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import { site, thinking, work } from '../data/site';
+import { URLS } from '../config';
+const navigation = [
+  { label: 'Work', href: URLS.work },
+  { label: 'Writing', href: URLS.writing },
+];
+const revised = new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'America/Los_Angeles' }).toUpperCase();
+---
+<Layout>
+  <header class="site-header">
+    <span class="site-name">{site.name}</span>
+    <nav aria-label="Main navigation">
+      {navigation.map(({ label, href }) => <a href={href}>{label}</a>)}
+    </nav>
+  </header>
+  <main>
+    <section class="intro text-column" aria-label="Introduction">
+      <p class="intro-body">{site.intro}</p>
+      <p class="intro-email">{site.emailBefore}<a href={URLS.email}>{site.email}</a>.</p>
+    </section>
+    <section class="section-grid thinking" aria-labelledby="thinking-heading">
+      <h2 id="thinking-heading" class="section-label">What I think about</h2>
+      <div class="thinking-list">
+        {thinking.map((entry) => (
+          <div class="thinking-entry">
+            <h3 class="section-label">{entry.topic}</h3>
+            <p>{entry.text}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+    <section id="work" class="section-grid work">
+      <h2 class="section-label">Work</h2>
+      <div class="work-list">
+        {work.map((entry) => (
+          <article class="work-entry">
+            <p class="work-date">{entry.date}</p>
+            <div class="work-content">
+              <div class="work-heading"><h3>{entry.name}</h3><span class="work-role">{entry.role}</span></div>
+              {entry.description && <p>{entry.description}</p>}
+              {'image' in entry && entry.image && (
+                <figure>
+                  <Image src={entry.image} width={1600} height={Math.round(1600 * entry.image.height / entry.image.width)}
+                    widths={[800, 1600]} sizes="(max-width: 720px) calc(100vw - 48px), 640px" quality={82}
+                    alt={entry.alt} loading="lazy" decoding="async" />
+                  <figcaption>{entry.caption}</figcaption>
+                </figure>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+    <section id="writing" class="section-grid">
+      <h2 class="section-label">Writing</h2>
+      <div class="section-body writing-body">
+        <p>{site.writingBefore}<a href={URLS.substack}>Substack</a>{site.writingAfter}</p>
+        <p>{site.writingEmail}</p>
+        <a class="button button-filled" href={URLS.subscribe}>Subscribe</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="title-block"><span>RAN YANG</span><span>SAN FRANCISCO</span><span>REVISED {revised}</span></div>
+    <div class="footer-links"><a href={URLS.linkedin}>LinkedIn</a></div>
+  </footer>
+</Layout>

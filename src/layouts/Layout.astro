@@ -1,0 +1,17 @@
+---
+import '../styles/globals.css';
+import { URLS } from '../config';
+import { site } from '../data/site';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>{site.name}</title>
+    <meta name="description" content={site.description} />
+    <link rel="canonical" href={URLS.site} />
+  </head>
+  <body><div class="page-shell"><slot /></div></body>
+</html>
