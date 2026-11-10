@@ -35,7 +35,7 @@ export const thinking = [
   },
   {
     "topic": "Group decisions",
-    "text": "What lets a group reach a decision its members could not reach alone? I gave lectures for 200 to 300 people at Studio Alpha. I am starting Open Discussion, a monthly live conversation online where founders bring a decision they are facing. It runs in Chinese first. The first date is not set."
+    "text": "What lets a group reach a decision its members could not reach alone? I gave lectures for 200 to 300 people at Studio Alpha. I am starting Open Discussion, a monthly live conversation online where founders bring a decision they are facing. It runs in English, or in Chinese when everyone in the room speaks it. The first date is not set."
   },
   {
     "topic": "Ecology",
