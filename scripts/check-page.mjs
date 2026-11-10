@@ -10,7 +10,7 @@ const decode = (value) => value.replace(/&#(x[0-9a-f]+|[0-9]+);/gi, (_, code) =>
   .replace(/&apos;|&#39;/g, "'").replace(/&quot;/g, '"').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&');
 const text = decode(html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ');
 if (/[\u3400-\u9fff]/.test(html)) { console.error('FAIL: Chinese characters in the page'); process.exit(1); }
-for (const required of ['mainly work on Paso', 'What I think about', 'What would it take for an industry and the river beside it to both do well?', 'New essays and the first Open Discussion date arrive by email.', 'REVISED', 'What is the right product at the right time?', 'Open Discussion', 'practiced', 'first 2 stores', 'chain grew to 6.', '200 to 300', '76,000', 'Tap Go, first store, Shanghai', "A'GAIN, candle in spent coffee grounds"]) {
+for (const required of ['mainly work on Paso', 'What I think about', 'What would it take for an industry and the river beside it to both do well?', 'New essays and the first Open Discussion date arrive by email.', 'REVISED', 'What is the right product at the right time?', 'Open Discussion', 'practiced', 'first 2 stores', 'chain grew to 6.', '200 to 300', '78,000', 'Tap Go, first store, Shanghai', "A'GAIN, candle in spent coffee grounds"]) {
   if (!text.includes(required)) fail(`Missing required text: ${required}`);
 }
 for (const forbidden of ['Get the first date', 'The longer aim is ecological', 'I care about']) {

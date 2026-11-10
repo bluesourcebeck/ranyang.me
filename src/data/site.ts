@@ -8,7 +8,7 @@ export const site = {
   "email": "ranyang@alumni.upenn.edu",
   "description": "Ran Yang lives in San Francisco and mainly works on Paso. Notes on what he thinks about: timing, markets, craft and ecology.",
   "writingBefore": "I write essays in English on ",
-  "writingAfter": ". In Chinese I have made short videos since June 2025 on WeChat Channels, RedNote and Douyin, where about 76,000 people follow them.",
+  "writingAfter": ". In Chinese I have made short videos since June 2025 on WeChat Channels, RedNote and Douyin, where about 78,000 people follow them.",
   "writingEmail": "New essays and the first Open Discussion date arrive by email."
 };
 
