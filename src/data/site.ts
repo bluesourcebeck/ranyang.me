@@ -9,7 +9,7 @@ export const site = {
   "description": "Ran Yang lives in San Francisco and mainly works on Paso. Notes on what he thinks about: timing, markets, craft and ecology.",
   "writingBefore": "I write essays in English on ",
   "writingAfter": ". In Chinese I have made short videos since June 2025 on WeChat Channels, RedNote and Douyin, where about 78,000 people follow them.",
-  "writingEmail": "New essays and the first Open Discussion date arrive by email."
+  "writingEmail": "New essays and Open Discussion dates arrive by email."
 };
 
 export const thinking = [
@@ -35,7 +35,7 @@ export const thinking = [
   },
   {
     "topic": "Group decisions",
-    "text": "What lets a group reach a decision its members could not reach alone? I gave lectures for 200 to 300 people at Studio Alpha. I am starting Open Discussion, a monthly live conversation online where founders bring a decision they are facing. The first date is not set."
+    "text": "What lets a group reach a decision its members could not reach alone? I gave lectures for 200 to 300 people at Studio Alpha. I am starting Open Discussion, a monthly live conversation online where founders bring a decision they are facing. The first is on Wednesday, Dec 2, at 5:00 pm Pacific."
   },
   {
     "topic": "Ecology",
