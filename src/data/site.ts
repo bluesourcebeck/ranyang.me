@@ -35,7 +35,8 @@ export const thinking = [
   },
   {
     "topic": "Group decisions",
-    "text": "What lets a group reach a decision its members could not reach alone? I gave lectures for 200 to 300 people at Studio Alpha. I am starting Open Discussion, a monthly live conversation online where founders bring a decision they are facing. The first is on Wednesday, Dec 2, at 5:00 pm Pacific."
+    "text": "What lets a group reach a decision its members could not reach alone? I gave lectures for 200 to 300 people at Studio Alpha. I am starting Open Discussion, a monthly live conversation online where founders bring a decision they are facing. The first is on Wednesday, Dec 2, at 5:00 pm Pacific.",
+    "link": { "label": "Reserve a seat", "href": "https://bypaso.com/traction/open-discussion" }
   },
   {
     "topic": "Ecology",
