@@ -27,7 +27,7 @@ const revised = new Date().toLocaleDateString('en-US', { month: 'short', year: '
         {thinking.map((entry) => (
           <div class="thinking-entry">
             <h3 class="section-label">{entry.topic}</h3>
-            <p>{entry.text}{'link' in entry && entry.link && <>{' '}<a href={entry.link.href}>{entry.link.label}</a>.</>}</p>
+            <p>{entry.text}</p>
           </div>
         ))}
       </div>
